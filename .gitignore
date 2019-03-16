@@ -32,6 +32,7 @@
 
 # IntelliJ
 /out/
+workspace.xml
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
