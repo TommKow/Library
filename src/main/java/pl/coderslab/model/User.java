@@ -22,6 +22,11 @@ public class User {
     public User() {
     }
 
+    public User(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
     public User(String email, String password, Book book, boolean ban, LocalDateTime devotionDate, double penalty) {
         this.email = email;
         this.password = password;
