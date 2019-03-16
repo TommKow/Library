@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import pl.coderslab.dao.UserDao;
 import pl.coderslab.model.User;
 
@@ -30,7 +31,9 @@ public class UserController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public String createUser(@RequestAttribute User user){
+    public String createUser(@RequestParam String email, @RequestParam String password, Model model){
+        User user = new User(email, password);
+        model.addAttribute("user", user);
         userDao.saveUser(user);
         return "registerUser";
     }
