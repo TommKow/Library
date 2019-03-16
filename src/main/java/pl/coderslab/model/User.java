@@ -16,8 +16,8 @@ public class User {
     private Book book;
     private boolean ban;
     private LocalDateTime devotionDate;
-    @Column(nullable = false)
     private double penalty;
+
 
     public User() {
     }
@@ -86,4 +86,5 @@ public class User {
     public void setPenalty(double penalty) {
         this.penalty = penalty;
     }
+
 }
