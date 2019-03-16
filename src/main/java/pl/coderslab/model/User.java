@@ -17,6 +17,4 @@ public class User {
     private LocalDateTime devotionDate;
     @Column(nullable = false)
     private double penalty;
-
-
 }
