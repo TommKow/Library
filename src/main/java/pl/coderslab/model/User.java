@@ -1,7 +1,6 @@
 package pl.coderslab.model;
 
 import javax.persistence.*;
-import java.awt.print.Book;
 import java.time.LocalDateTime;
 
 @Entity
@@ -15,6 +14,6 @@ public class User {
     private Book book;
     private boolean ban;
     private LocalDateTime devotionDate;
-    @Column(nullable = false)
     private double penalty;
+
 }

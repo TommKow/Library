@@ -9,6 +9,7 @@
     <form:form method="post" modelAttribute="user">
         <form:input path="email"/>
         <form:input path="password"/>
+
     <input type="submit" value="Save">
     </form:form>
 </body>
