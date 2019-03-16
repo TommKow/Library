@@ -10,13 +10,15 @@ public class Book {
     private long id;
     private String title;
     private String author;
+    private boolean checked;
 
     public Book() {
     }
 
-    public Book(String title, String author) {
+    public Book(String title, String author, boolean checked) {
         this.title = title;
         this.author = author;
+        this.checked = checked;
     }
 
     public long getId() {
@@ -45,10 +47,14 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "Book: " +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                '}';
+                ", author='" + author + '\'';
+
+    }
+
+    public boolean isChecked() {
+        return checked;
     }
 }
